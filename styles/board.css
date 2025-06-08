@@ -1,0 +1,398 @@
+.searchFieldBoard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 312px;
+    height: 48px;
+    border-radius: 10px;
+    border-width: 1px;
+    border: 1px solid rgba(168, 168, 168, 1);
+    gap: 10px;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.vector {
+    height: 31px;
+    border-width: 1px;
+    border: 1px solid rgba(209, 209, 209, 1)
+}
+
+.headBoard {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.searchFieldBoard svg {
+    background: white;
+    border-radius: 56px;
+}
+
+.searchFieldBoard:hover svg {
+    background-color: rgba(238, 238, 238, 1);
+}
+
+.headBoardPosition {
+    width: 1056px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headBoardRight {
+    display: flex;
+    flex-direction: row;
+    width: 504px;
+    height: 48px;
+    gap: 32px;
+}
+
+.addTaskButton {
+    width: 160px;
+    height: 48px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    background-color: rgba(42, 54, 71, 1);
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.addTaskButton:hover {
+    background: rgba(41, 171, 226, 1);
+}
+
+.h1Board {
+    padding-bottom: 0;
+}
+
+.searchButton {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.searchButton button {
+    background-color: white;
+}
+
+.searchFieldBoard input {
+    font-weight: 400;
+    font-size: 20px;
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.searchFieldBoard:focus-within {
+    border: 1px solid #29ABE2
+}
+
+#taskBoard {
+    width: 100%;
+    display: flex;
+    gap: 26px;
+    padding-right: 64px;
+}
+
+.baseBoard {
+    width: 246px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.headTask {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.iconAdd:hover rect,
+.iconAdd:hover path {
+    stroke: #29ABE2;
+}
+
+.iconSearch:active rect,
+.iconSearch:active path {
+    stroke: #29ABE2;
+}
+
+#noTaskToDo {
+    width: 246px;
+    height: 48px;
+    border-radius: 10px;
+    border-width: 1px;
+    background: #E7E7E7;
+    border: 1px dashed #A8A8A8;
+    box-shadow: 0px 0px 4px 0px #00000029;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: #A8A8A8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.taskCards {
+    cursor: pointer;
+    border-radius: 24px;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 16px;
+}
+
+.cardsLabel {
+    margin-bottom: 24px;
+}
+
+.cardsTitleAndContent {
+    font-size: 16px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.cardsTitle {
+    font-weight: 700;
+}
+
+.cardsContent {
+    font-weight: 400;
+    color: rgba(168, 168, 168, 1);
+}
+
+#cardsSubtasks {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#cardsProgressBar {
+    width: 128px;
+    height: 8px;
+    border-radius: 8px;
+    background: rgba(244, 244, 244, 1);
+}
+
+.cardsProgress {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+#progressBar {
+    background: rgba(69, 137, 255, 1);
+    height: 8px;
+    border-radius: 16px;
+}
+
+#cardsBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardsAssignedTo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    height: 32px;
+}
+
+.cardsAssignedToIcon:nth-child(1) {
+    position: absolute;
+    left: 0;
+}
+
+.cardsAssignedToIcon:nth-child(2) {
+    position: absolute;
+    left: 24px;
+}
+
+.cardsAssignedToIcon:nth-child(3) {
+    position: absolute;
+    left: 48px;
+}
+
+.cardsAssignedToIcon:nth-child(4) {
+    position: absolute;
+    left: 72px;
+}
+
+.cardsAssignedToIcon:nth-child(5) {
+    position: absolute;
+    left: 96px;
+}
+
+.cardsAssignedToIcon:nth-child(6) {
+    position: absolute;
+    left: 120px;
+}
+
+#cardsPriority {
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.priorityLow {
+    background-image: url("../assets/img/icons/priority_low_green.svg");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+
+.priorityMedium {
+    background-image: url("../assets/img/icons/priority_medium_orange.svg");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+
+.priorityUrgent {
+    background-image: url("../assets/img/icons/priority_urgent_red.svg");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+
+.taskCards:active {
+    transform: rotate(5deg);
+}
+
+.contactCircleExtraSmall {
+    border: 1px solid white;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    height: 32px !important;
+    width: 32px !important;
+}
+
+.dragAreaHighlight {
+    height: 244px;
+    width: 252px;
+    border: 1px dashed #A8A8A8;
+    border-radius: 30px;
+}
+
+.cardsLabel p {
+    color: white;
+    padding: 4px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    width: fit-content;
+}
+
+.userStory {
+    background-color: #0038FF;
+}
+
+.technicalTask {
+    background-color: #1FD7C1;
+}
+
+#noTaskFoundMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    z-index: 3;
+}
+
+#noTaskFoundMessage button {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2A3647;
+    background-color: #2A3647;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 25px;
+    margin-top: 64px;
+}
+
+.headBoardLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.headBoardLeft a {
+    display: none;
+}
+
+.menuMoveToMobile {
+    background-color: #2b3647;
+    border-radius: 20px 0 20px 20px;
+    position: absolute;
+    right: 16px;
+    top: 48px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 6px 8px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menuMoveToMobile a {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    width: 90px !important;
+    height: 28px !important;
+    align-items: center;
+}
+
+.menuMoveToMobile a:hover {
+    background-color: rgba(9, 25, 49, 1);
+    border-radius: 8px;
+}
+
+.moveToDiv {
+    height: 25px;
+    width: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.openOverlayMoveTo {
+    display: none;
+}

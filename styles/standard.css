@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter';
+  line-height: 120%;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 990px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  background-color: #f6f7f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1{
+  padding-bottom: 40px;
+  font-size: 61px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  border: unset;
+}
+
+input {
+  cursor: pointer;
+  border: unset;
+}
+
+input:focus {
+  outline: none; 
+}
+
+input::placeholder {
+  color: rgba(209, 209, 209, 1);
+
+}
+
+.bShadow_blur4_opacity01 {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bShadow_blur14_opacity04 {
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.04);
+}
+
+.bShadow_blur4_opacity25 {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+
+.bShadow_blur4_opacity015 {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.d_none {
+  display: none !important;
+}
+
+.d_flex {
+  display: flex;
+}
+
+.stopScrolling {
+  overflow: hidden;
+}
+
+.height_98 {
+  height: 98px;
+}
+
+.height_174 {
+  height: 174px;
+}
+
+.marginb_8px {
+  margin-bottom: 8px;
+}
+
+.lightBlue {
+  color: #29ABE2;
+}
+
+.blue_line_150x3 {
+  width: 150px;
+  height: 3px;
+  background-color: #29ABE2;
+  margin-bottom: 32px;
+}
+
+.blue_line_90x3 {
+  width: 90px;
+  height: 3px;
+  background-color: #29ABE2;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap_32 {
+  gap: 32px;
+}
+
+.gap_12 {
+  gap: 12px;
+}
+
+.customCheckbox {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-image: url('../assets/img/icons/checkbox-unchecked.svg');  /* Unchecked Zustand */
+  background-size: cover;
+  cursor: pointer;
+}
+
+/* Wenn die Checkbox gecheckt ist */
+input[type="checkbox"]:checked + label .customCheckbox {
+  background-image: url('../assets/img/icons/checkbox-checked.svg');  /* Checked Zustand */
+}
+
+/* Hover-Effekt für unchecked Zustand */
+input[type="checkbox"]:not(:checked) + label .customCheckbox:hover {
+  background-image: url('../assets/img/icons/checkbox-unchecked-hover.svg');   /*Unchecked Hover Zustand */
+}  
+
+/*Hover-Effekt für checked Zustand */
+input[type="checkbox"]:checked + label .customCheckbox:hover {
+  background-image: url('../assets/img/icons/checkbox-checked-hover.svg');   /*Checked Hover Zustand */
+}  
+
+:root {
+  --orange: #ff7a00;
+  --pink: #ff5eb3;
+  --purple: #6e52ff;
+  --violet: #9327ff;
+  --cyan: #00bee8;
+  --green: #1fd7c1;
+  --peach: #ff745e;
+  --blue: #0038ff;
+  --lime: #c3ff2b;
+  --yellow: #ffe62b;
+  --gold: #ffc701;
+  --coral: #ffbb2b;
+  --red: #ff4646;
+  --magenta: #fc71ff;
+  --light-orange: #ffbb2b;
+  --dark-blue: #462f8a;
+}
+
+.backgroundColor1 {
+  background-color: var(--orange);
+}
+
+.backgroundColor2 {
+  background-color: var(--pink);
+}
+
+.backgroundColor3 {
+  background-color: var(--purple);
+}
+
+.backgroundColor4 {
+  background-color: var(--violet);
+}
+
+.backgroundColor5 {
+  background-color: var(--cyan);
+}
+
+.backgroundColor6 {
+  background-color: var(--green);
+}
+
+.backgroundColor7 {
+  background-color: var(--peach);
+}
+
+.backgroundColor8 {
+  background-color: var(--blue);
+}
+
+.backgroundColor9 {
+  background-color: var(--lime);
+}
+
+.backgroundColor10 {
+  background-color: var(--yellow);
+}
+
+.backgroundColor11 {
+  background-color: var(--gold);
+}
+
+.backgroundColor12 {
+  background-color: var(--coral);
+}
+
+.backgroundColor13 {
+  background-color: var(--red);
+}
+
+.backgroundColor14 {
+  background-color: var(--magenta);
+}
+
+.backgroundColor15 {
+  background-color: var(--light-orange);
+}
+
+.backgroundColor16 {
+  background-color: var(--dark-blue);
+}
+
+.backgroundColorOrange {
+  background-color: var(--orange);
+}
+
+.backgroundColorPink {
+  background-color: var(--pink);
+}
+
+.backgroundColorPurple {
+  background-color: var(--purple);
+}
+
+.backgroundColorViolet {
+  background-color: var(--violet);
+}
+
+.backgroundColorCyan {
+  background-color: var(--cyan);
+}
+
+.backgroundColorGreen {
+  background-color: var(--green);
+}
+
+.backgroundColorPeach {
+  background-color: var(--peach);
+}
+
+.backgroundColorBlue {
+  background-color: var(--blue);
+}
+
+.backgroundColorLime {
+  background-color: var(--lime);
+}
+
+.backgroundColorYellow {
+  background-color: var(--yellow);
+}
+
+.backgroundColorGold {
+  background-color: var(--gold);
+}
+
+.backgroundColorCoral {
+  background-color: var(--coral);
+}
+
+.backgroundColorRed {
+  background-color: var(--red);
+}
+
+.backgroundColorMagenta {
+  background-color: var(--magenta);
+}
+
+.backgroundColorLightOrange {
+  background-color: var(--light-orange);
+}
+
+.backgroundColorDarkBlue {
+  background-color: var(--dark-blue);
+}
+
+.bg-gray {
+    background-color: #D1D1D1;
+}
+
+.orientation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}

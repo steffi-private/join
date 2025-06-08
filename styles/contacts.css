@@ -1,0 +1,333 @@
+.main_content_contacts {
+    height: calc(100vh - 96px);
+    width: calc(100vw - 232px);
+    margin-left: 232px;
+    margin-top: 96px;
+    background-color: #f6f7f8;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+.contacts {
+    background-color: white;
+    min-width: 456px;
+    height: calc(100vh - 96px);
+    position: sticky;
+    box-shadow: 4px 0px 6px 0px rgba(0, 0, 0, 0.08);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.main_contacts {
+    height: fit-content;
+    padding-left: 48px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.main_contacts h1{
+    padding-bottom: 0;
+}
+
+.contactsList {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.seperator {
+    height: 59px;
+    border: 2px solid rgba(41, 171, 226, 1)
+}
+
+.addNewContactButton {
+    width: 352px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: rgba(42, 54, 71, 1) ;
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.addNewContactButton:hover {
+    background-color: rgba(41, 171, 226, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.addNewContactButton:active {
+    background-color: rgba(9, 25, 49, 1);
+}
+
+.contactsListTop {
+    position: fixed;
+    top: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 101px;
+    background-color: white;
+    z-index: 2;
+}
+
+#contactDetails {
+    position: fixed;
+    top: auto;
+    left: 2500px; 
+    padding-top: 32px;
+    gap: 21px;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    width: 600px;
+}
+
+.slightFromRightToCenter {
+    animation: slightDetailsFromRightToCenter 250ms forwards;
+}
+
+@keyframes slightDetailsFromRightToCenter {
+    from {left: 2500px;}
+    to {left: 745px;}
+}
+
+.contactDetailsTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 54px;
+    height: 120px;
+}
+
+.contactName {
+    font-weight: 500;
+    font-size: 47px;
+    padding-bottom: 8px;
+}
+
+.contactDetailsButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.contactButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    min-width: 62px;
+}
+
+.contactButton:hover {
+    cursor: pointer;
+    color: #29ABE2;
+    font-weight: 700;
+}
+
+.contactButton:hover svg path {
+    fill: #29ABE2; 
+}
+
+.contactDetailsMiddle{
+    font-size: 20px;
+    font-weight: 400;
+    width: 207px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+}
+
+.contactDetailsKey {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+#contactDetails a{
+    color:#007CEE;
+}
+
+.alphabetInContactList {
+    height: 58px;
+    width: 352px;
+    font-size: 20px;
+    padding: 17px 36px;
+}
+
+.seperatorContactList {
+    width: 352px;
+    height: 1px;
+    border-radius: 3px;
+    border: 1px solid #D1D1D1;
+    background-color: #D1D1D1;
+    margin: 8px 0px;
+}
+
+.contactInList {
+    cursor: pointer;
+    height: 78px;
+    width: 352px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 25px;
+    gap: 35px;
+}
+
+.contactInList:hover:not(.click) {
+    background: linear-gradient(180deg, #F9F9F9 0%, #F0F0F0 100%);
+    border-radius: 10px;
+}
+
+.click {
+    background: #2A3647;
+    color: white;
+    border-radius: 10px;
+}
+
+.contactInList p {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.contactInList a{
+    color:#007CEE;
+}
+
+.scrollContactList {
+    padding: 32px 0px;
+    position: absolute;
+    top: 0;
+}
+
+.contactCircleSmall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contactCircleBig {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    box-shadow: 0px 0px 4px 0px #0000001a;
+    border: 3px solid white;
+    }    
+
+#addContactSuccess, #editContactSuccess, #deleteContactSuccess {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0px 0px 62px;
+    z-index: 3;
+    transform: translateX(300%); /* Startposition außerhalb des Sichtbereichs */
+    animation: slideIn 1000ms forwards, pause 3000ms 1000ms forwards; 
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(300%); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes pause {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(300%); 
+    }
+}
+
+#addContactSuccess button {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2A3647;
+    background-color: #2A3647;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 25px;
+    margin-top: 128px;
+}
+
+#editContactSuccess button, #deleteContactSuccess button {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2A3647;
+    background-color: #2A3647;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 25px;
+    margin-top: 256px;
+}
+
+.theePointsMenu{
+    height: 56px;
+    width: 56px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 2px 0px 6px 0px rgb(0, 0, 0, 0.2);
+    background-color: #2b3647;
+    position: absolute;
+    bottom: 110px;
+    right: 20px;
+}
+
+.theePointsMenu:hover {
+    background: rgba(41, 171, 226, 1);
+}
+
+.theePointsMenu:active {
+    background: rgba(9, 25, 49, 1);
+}
+
+.theePointsMenu img{
+    height: 32px;
+}
+
+.respContactEditMenuClosed {
+    transform: unset;
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrowLeftContact{
+    display: none;
+}

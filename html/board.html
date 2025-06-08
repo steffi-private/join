@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join/Board</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/join_logo_dark.svg" />
+
+    <link rel="stylesheet" href="../styles/standard.css" />
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/respMenu.css">
+    <link rel="stylesheet" href="../styles/board.css">
+    <link rel="stylesheet" href="../styles/editTask.css">
+    <link rel="stylesheet" href="../styles/taskDetailview.css">
+    <link rel="stylesheet" href="../styles/summary.css">
+    <link rel="stylesheet" href="../styles/add_task.css" />
+    <link rel="stylesheet" href="../styles/respBoard.css" />
+    <link rel="stylesheet" href="../styles/respAddTask.css" />
+
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="../scripts/templates.js"></script>
+    <script src="../script.js"></script>
+    <script src="../scripts/header_navbar.js"></script>
+    <script src="../scripts/contacts.js"></script>
+    <script src="../scripts/boardEditViewFields.js"></script>
+    <script src="../scripts/boardDetailView.js"></script>
+    <script src="../scripts/boardEditView.js"></script>
+    <script src="../scripts/addTask.js"></script>
+    <script src="../scripts/addTaskAssignedTo.js"></script>
+    <script src="../scripts/remoteStorage.js"></script>
+    <script src="../scripts/board.js"></script>
+    <script src="../scripts/search.js"></script>
+
+
+</head>
+
+<body onload="boardInit()">
+    <div class="d_flex">
+        <nav class="main_nav_bar" w3-include-html="../assets/templates/navBar.html"></nav>
+        <div class="collumn">
+            <header class="main_header" w3-include-html="../assets/templates/header.html"></header>
+            <div w3-include-html="../assets/templates/respMenu.html"></div>
+
+            <main class="main_content_board">
+                <div class="headBoard">
+                    <div class="headBoardPosition">
+                        <div class="headBoardLeft">
+                            <h1 class="h1Board">Board</h1>
+                            <a href="../html/addTask.html">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="10" fill="#2A3647" />
+                                    <path d="M20 10V30" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M30 20L10.0005 20.138" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="headBoardRight">
+                            <div class="searchFieldBoard">
+                                <input onkeyup="searchTask()" type="text" placeholder="Find Task" class="searchBarBoard"
+                                    id="searchInput">
+                                <div class="searchButton">
+                                    <div class="vector"></div>
+                                    <button>
+                                        <svg class="iconSearch" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="mask0_75609_16019" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                                <rect width="32" height="32" fill="#D9D9D9" />
+                                            </mask>
+                                            <g mask="url(#mask0_75609_16019)">
+                                                <path
+                                                    d="M13.7118 20.2137C11.8946 20.2137 10.3567 19.5843 9.098 18.3256C7.83931 17.0669 7.20996 15.529 7.20996 13.7118C7.20996 11.8946 7.83931 10.3567 9.098 9.098C10.3567 7.83931 11.8946 7.20996 13.7118 7.20996C15.529 7.20996 17.0669 7.83931 18.3256 9.098C19.5843 10.3567 20.2137 11.8946 20.2137 13.7118C20.2137 14.4454 20.097 15.1372 19.8636 15.7874C19.6302 16.4376 19.3134 17.0127 18.9133 17.5129L24.5149 23.1145C24.6983 23.2979 24.79 23.5313 24.79 23.8147C24.79 24.0981 24.6983 24.3315 24.5149 24.5149C24.3315 24.6983 24.0981 24.79 23.8147 24.79C23.5313 24.79 23.2979 24.6983 23.1145 24.5149L17.5129 18.9133C17.0127 19.3134 16.4376 19.6302 15.7874 19.8636C15.1372 20.097 14.4454 20.2137 13.7118 20.2137ZM13.7118 18.2131C14.9622 18.2131 16.025 17.7755 16.9002 16.9002C17.7755 16.025 18.2131 14.9622 18.2131 13.7118C18.2131 12.4615 17.7755 11.3987 16.9002 10.5234C16.025 9.64815 14.9622 9.21053 13.7118 9.21053C12.4615 9.21053 11.3987 9.64815 10.5234 10.5234C9.64815 11.3987 9.21053 12.4615 9.21053 13.7118C9.21053 14.9622 9.64815 16.025 10.5234 16.9002C11.3987 17.7755 12.4615 18.2131 13.7118 18.2131Z"
+                                                    fill="#2A3647" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="addTaskButton"
+                                onclick="handleCreateNewTask(event, 'toDoTask')">Add task
+                                <svg width="18.67" height="18.67" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.73438 11.3327H0.734375V8.66602H8.73438V0.666016H11.401V8.66602H19.401V11.3327H11.401V19.3327H8.73438V11.3327Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="taskBoard">
+                    <div id="toDoBoard" class="baseBoard">
+                        <div class="headTask">
+                            <p>To do</p>
+                            <button onclick="handleCreateNewTask(event, 'toDoTask')">
+                                <svg class="iconAdd" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="#2A3647" stroke-width="2" />
+                                    <path d="M12 8V16" stroke="#2A3647" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 12.0754L8 12.0754" stroke="#2A3647" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="toDoTask" ondragover="allowDrop(event)" ondrop="drop(event)">
+
+                        </div>
+                    </div>
+                    <div id="inProgressBoard" class="baseBoard">
+                        <div class="headTask">
+                            <p>In progress</p>
+                            <button onclick="handleCreateNewTask(event, 'inProgressTask')">
+                                <svg class="iconAdd" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="#2A3647" stroke-width="2" />
+                                    <path d="M12 8V16" stroke="#2A3647" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 12.0754L8 12.0754" stroke="#2A3647" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="inProgressTask" ondragover="allowDrop(event)" ondrop="drop(event)">
+
+                        </div>
+                    </div>
+                    <div id="awaitFeedbackBoard" class="baseBoard">
+                        <div class="headTask">
+                            <p>Await Feedback</p>
+                            <button onclick="handleCreateNewTask(event, 'awaitFeedbackTask')">
+                                <svg class="iconAdd" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1" y="1" width="22" height="22" rx="7" stroke="#2A3647" stroke-width="2" />
+                                    <path d="M12 8V16" stroke="#2A3647" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M16 12.0754L8 12.0754" stroke="#2A3647" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="awaitFeedbackTask" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                    </div>
+                    <div id="doneBoard" class="baseBoard">
+                        <div class="headTask">
+                            <p>Done</p>
+                        </div>
+                        <div id="doneTask" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+                    </div>
+                </div>
+                <div class="d_none" id="noTaskFoundMessage">
+                    <button class="center bShadow_blur4_opacity015">No Task found</button>
+                </div>
+                <div id="orientationMessage" class="orientation-overlay d_none">
+                    <p>Please rotate your device to portrait mode.</p>
+                </div>
+            </main>
+
+            <section id="overlayBoard" onclick="closeDialog()">
+            </section>
+            <section id="overlayBoardAddTask" onclick="closeDialogAddTask()">
+            </section>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

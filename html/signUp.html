@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Join/Sign up</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/join_logo_dark.svg"/>
+
+    <link rel="stylesheet" href="../styles/standard.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/signUp.css" />
+    <link rel="stylesheet" href="../styles/taskDetailview.css" />
+    <link rel="stylesheet" href="../styles/respSignUp.css" />
+
+    <script src="../script.js"></script>
+    <script src="../scripts/remoteStorage.js"></script>
+    <script src="../scripts/signUp.js"></script>
+    <script src="../scripts/contacts.js"></script>
+</head>
+
+<body class="body_logIn"> <!-- onload="checkInputs()"-->
+    <header class="header_logIn">
+        <img class="header_LogIn_logo" src="../assets/img/join_logo_dark.svg" alt="join-logo" />
+    </header>
+    
+    <main class="main_logIn">
+        <div class="signUp_content bShadow_blur14_opacity04">
+            <div class="signUp_headline">
+                <img class="back_to_logIn_btn" onclick="window.location.href='../index.html'" src="../assets/img/icons/arrow-left-line2.svg" alt="Back to Log in">
+                <h1>Sign up</h1>
+                <div class="blue_line_150x3"></div>
+            </div>
+            <form onchange="enableSignUpButton()" onsubmit="signUp(); return false;" class="signUp_form">
+                <div class="gap_32 center">
+                    <div class="password_container">
+                        <input type="text" placeholder="Name" class="input_logIn" id="signUpName" onblur="signUpNameError()" required>
+                        <img src="../assets/img/icons/person.svg" alt="Password" class="input_logIn_img">
+                        <div class="signUp_error d_none" id="signUpName_error">Please enter your name.</div>
+                    </div>
+                    <div class="password_container">
+                        <input type="email" placeholder="Email" class="input_logIn" id="signUpEmail" onblur="signUpEmailError()" required>
+                        <img src="../assets/img/icons/mail.svg" alt="Password" class="input_logIn_img">
+                        <div class="signUp_error d_none" id="signUpEmail_error">The email address entered is not valid. Please try again.</div>
+                    </div>
+                    <div class="password_container">
+                        <input onfocus="onFocusSignUp('signUpPassword')" onblur="onBlurSignUp('signUpPassword'); signUpPasswordError()" type="password" placeholder="Password" class="input_logIn" id="signUpPassword" required>
+                        <img onclick="handleSignUpImageClick('signUpPassword')" src="../assets/img/icons/lock.svg" alt="Password" class="input_logIn_img" id="signUpPasswordImg">
+                        <div class="signUp_error d_none" id="signUpPassword_error">Please enter a password.</div>
+                    </div>
+                    <div class="password_container">
+                        <input onfocus="onFocusSignUp('signUpConfirmPassword')" onblur="onBlurSignUp('signUpConfirmPassword'); signUpConfirmPasswordError()" type="password" placeholder="Confirm Password" class="input_logIn" id="signUpConfirmPassword" required >
+                        <img onclick="handleSignUpImageClick('signUpConfirmPassword')" src="../assets/img/icons/lock.svg" alt="Password" class="input_logIn_img" id="signUpConfirmPasswordImg">
+                        <div class="signUp_error d_none" id="signUp_error">Your passwords don't match. Please try again.</div>
+                    </div>
+                    <div class="signUpCheckbox">
+                        <input type="checkbox" id="signUpCheckbox" onclick="signUpCheckboxError()" required>
+                        <label for="signUpCheckbox"><span class="customCheckbox"></span></label>
+                        <p>I accept the <a href="../html/privacyPolice.html" class="lightBlue">Privacy Policy</a></p>
+                    </div>
+                    <div class="signUp_error d_none" id="signUpCheckbox_error">
+                        Please accept the Privacy Policy to continue.
+                    </div>
+                    <div class="signUp_btn">
+                        <button class="center" type="submit" id="signUpBtn">Sign up</button>
+                    </div>
+                </div>
+            </form>
+            <button class="center" type="button" id="signUpBtn_overlay" onclick="checkForSignUpErrors()"></button>
+        </div>
+        <div class="d_none" onclick="goToLogIn()" id="signUpSuccess">
+            <button class="center bShadow_blur4_opacity015" >You Signed Up successfully</button>
+        </div>
+        <div id="orientationMessage" class="orientation-overlay d_none">
+            <p>Please rotate your device to portrait mode.</p>
+        </div>
+    </main>
+    
+    <footer class="footer_logIn">
+        <a href="../html/privacyPolice.html">Privacy Policy</a>
+        <a href="../html/legalNotice.html">Legal notice</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/standard.css" />
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/respMenu.css">
+    <link rel="stylesheet" href="../styles/add_task.css" />
+    <link rel="stylesheet" href="../styles/board.css" />
+    <link rel="stylesheet" href="../styles/editTask.css">
+    <link rel="stylesheet" href="../styles/taskDetailview.css">
+    <link rel="stylesheet" href="../styles/respBoard.css" />
+    <link rel="stylesheet" href="../styles/respAddTask.css" />
+
+    <script src="../scripts/boardDetailView.js"></script>
+    <script src="../scripts/boardEditViewFields.js"></script>
+    <script src="../scripts/boardEditView.js"></script>
+    <script src="../scripts/board.js"></script>
+    <script src="../scripts/contacts.js"></script>
+    <script src="../scripts/templates.js"></script>
+    <script src="../scripts/addTask.js"></script>
+    <script src="../scripts/addTaskAssignedTo.js"></script>
+    <script src="../script.js"></script>
+    <script src="../scripts/remoteStorage.js"></script>
+
+    <title>Join/Add Task</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/img/join_logo_dark.svg"
+    />
+  </head>
+  <body onload="initAddTask()">
+    <div class="d_flex">
+      <nav
+        class="main_nav_bar"
+        w3-include-html="../assets/templates/navBar.html"
+      ></nav>
+      <div class="collumn">
+        <header
+          class="main_header"
+          w3-include-html="../assets/templates/header.html"
+        ></header>
+        <div w3-include-html="../assets/templates/respMenu.html"></div>
+        <main
+          class="main_content overflowY_hidden"
+          w3-include-html="../assets/templates/addTaskTemplate.html"
+        >
+      </main>
+      <div id="orientationMessage" class="orientation-overlay d_none">
+        <p>Please rotate your device to portrait mode.</p>
+      </div>
+      </div>
+    </div>
+    <script src="../scripts/header_navbar.js"></script>
+
+  </body>
+</html>

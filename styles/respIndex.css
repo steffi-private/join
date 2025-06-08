@@ -1,0 +1,272 @@
+@media (min-width: 1024px) {
+.mobileStartScreen {
+    display: none;
+}
+}
+
+@media (max-width:1024px) {
+.mobileHeaderIcon {
+    width: 100px;
+    height: 122px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveToTopLeft 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+    transform-origin: top left;
+    z-index: 10;
+}
+
+@keyframes moveToTopLeft {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        top: 37px;
+        left: 38px;
+        transform: translate(0, 0) scale(0.64);
+    }
+}
+
+.mobileStartScreen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2a3647;
+    z-index: 11;
+    animation: changeTransparency 0.8s ease-in-out forwards;
+    animation-delay: 0.2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@keyframes changeTransparency {
+    0% {
+        opacity: 1;
+        z-index: 11;
+    }
+
+    50% {
+        opacity: 0;
+        z-index: 11;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -11;
+    }
+}
+
+.mobileStartScreenIcon {
+    width: 100px;
+    height: 122px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveToTopLeft 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+    transform-origin: top left;
+    z-index: 11;
+    border-color: #2a3647;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.header_LogIn_right {
+    display: none;
+}
+
+.logIn_content {
+   padding: 48px 16px 48px 16px; 
+   width: 396px;
+}
+
+.logIn_content h1 {
+    font-size: 47px;  
+}
+
+.blue_line_150x3 {
+    width: 88px;
+}
+
+.password_container {
+    width: 364px;
+}
+
+.input_logIn {
+    width: 364px;
+    font-size: 21px;
+}
+
+.logIn_btn {
+    font-size: 16px;
+}
+
+#guestLogInBtn {
+    font-size: 16px;
+}
+
+.header_box_resp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;     
+}
+
+.header_LogIn_resp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInContent 0.5s ease-in-out 0.5s forwards;
+    animation-delay: 0.5s;
+    gap: 35px;
+    margin-top: 67px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    font-family: 'Inter', sans-serif;  
+}
+
+.header_LogIn_resp div{
+    font-size: 20px;
+}
+
+.footer_logIn {
+    bottom: 20px;
+}
+}
+
+@media (max-width:767px) {
+.logIn_btns {
+    flex-direction: column;
+    gap: 21px;
+    margin-top: 64px;
+}
+}
+
+@media (max-width:430px) {
+.logIn_content {
+   width: 354px;
+}
+.password_container, .input_logIn {
+    width: 322px;
+}
+}
+
+@media (max-width:375px) {
+.logIn_content {
+   width: 334px;
+}
+.password_container, .input_logIn {
+    width: 302px;
+}
+}
+
+@media (max-width:350px) {
+.logIn_content {
+   width: 304px;
+}
+.password_container, .input_logIn {
+    width: 272px;
+}
+}
+
+@media (max-height: 900px) {
+.header_logIn {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+.mobileHeaderIcon {
+    margin-bottom: 32px;
+}
+.main_logIn {
+    padding-top: 150px;
+    justify-content: flex-start; 
+    height: unset; 
+}
+.logIn_content {
+    margin-top: 16px;
+}
+.header_LogIn_resp {
+    margin: 32px 0 32px 0;
+}
+
+@media (max-height: 775px) {
+.logIn_btns {
+    margin-top: 48px;
+}
+}
+}
+
+@media (max-height: 890px) {
+.mobileHeaderIcon {
+    margin-bottom: 16px;
+}
+.main_logIn {
+    padding-top: 130px; 
+}
+.header_LogIn_resp {
+    margin: 48px 0 48px 0;
+}
+}
+
+@media (max-height: 850px) {
+.mobileHeaderIcon {
+    margin-bottom: 8px;
+}
+.main_logIn {
+    padding-top: 130px;
+}
+.logIn_content {
+    margin-top: 16px;
+}
+.header_LogIn_resp {
+    margin: 32px 0 32px 0;
+}
+}
+
+@media (max-height: 810px) {
+.main_logIn {
+    padding-top: 110px;
+}
+.logIn_content {
+    margin-top: 16px;
+}
+.header_LogIn_resp {
+    margin: 16px 0 16px 0;
+}
+}
+
+@media (max-height: 775px) {
+.logIn_btns {
+    margin-top: 48px;
+}
+}
+
+@media (max-height: 760px) {
+.logIn_content {
+    padding: 32px 16px 32px 16px;
+}
+.logIn_btns {
+    margin-top: 32px;
+}
+}
+
+@media (max-height: 700px) {
+.logIn_content {
+    padding: 16px;
+}
+.logIn_btns {
+    margin-top: 32px;
+}
+}

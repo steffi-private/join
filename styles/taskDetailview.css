@@ -1,0 +1,263 @@
+.overlayBoard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.375);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogBoard {
+    width: 525px;
+    max-height: 930px;
+    border-radius: 30px;
+    background-color: white;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.dialogBoard.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.dialogBoard.slide-out {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.dialogBoardFix {
+    width: 525px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.editViewScrollbar {
+    height: calc(100vh - 376px);
+    max-height: 730px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: -30px;
+}
+
+#editViewContent {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+#dialogBoardFrame {
+    margin: 48px 40px 48px 40px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+#closeOverlayBoard {
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    border-radius: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#closeOverlayBoard:hover {
+    background-color: rgba(238, 238, 238, 1);
+}
+
+.dialogBoardTop {
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#overlayTaskTitle {
+    font-weight: 700;
+    font-size: 61px;
+}
+
+#overlayTaskContent {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#overlayTaskDueDate {
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#overlayTaskPriority {
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+    align-items: center;
+}
+
+#overlayTaskDueDate div {
+    position: relative;
+    left: 40px;
+}
+
+.overlayTaskPriorityDiv {
+    position: relative;
+    left: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.priorityImg {
+    width: 32px;
+    height: 32px;
+}
+
+.overlayTaskAssignedTo p {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.overlayTaskAssignedToContacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.overlayTaskAssignedToContacts div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 445px;
+    height: 56px;
+    padding: 7px 16px;
+    gap: 16px;
+}
+
+.overlayTaskSubtasks {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 16px;
+    font-size: 16px;
+    padding-right: 32px;
+    padding-left: 8px;
+}
+
+.overlayTaskSubtasks:hover {
+    background-color: rgba(238, 238, 238, 1);
+    border-radius: 10px;
+}
+
+.overlayTaskSubtasks p {
+    margin-bottom: 0;
+    position: relative;
+    left: 16px;
+}
+
+.mb_8px {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+input[type="checkbox"] {
+    display: none;
+    cursor: none !important;
+}
+
+#overlayTaskBottom {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 24px;
+    gap: 8px;
+}
+
+.overlayTaskDelete button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    background: none;
+}
+
+.overlayTaskEdit button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    background: none;
+}
+
+.overlayTaskVector {
+    height: 24px;
+    border: 1px solid rgba(209, 209, 209, 1)
+}
+
+.overlayTaskDelete button:hover svg path {
+    fill: #29ABE2; /* Farbe bei Hover */
+}
+
+.overlayTaskEdit button:hover svg path {
+    fill: #29ABE2; /* Farbe bei Hover */
+}
+
+.overlayTaskDelete button:hover {
+    color: #29ABE2;
+}
+
+.overlayTaskEdit button:hover {
+    color: #29ABE2;
+}
+
+.contactCircleSmallDetailView {
+    border: 2px solid white;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    height: 42px !important;
+    width: 42px !important;
+    line-height: 1;
+}
+
+.assignedToContact p{
+    margin-bottom: 0 !important;
+    font-size: 19px;
+}
+
+.dialogBoardTop p {
+    color: white;
+    padding: 4px 24px;
+    border-radius: 8px;
+    font-size: 23px;
+    font-weight: 400;
+    width: fit-content;
+}
+
+.subtasksContent {
+    display: flex;
+    flex-direction: column;
+}

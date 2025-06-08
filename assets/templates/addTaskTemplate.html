@@ -1,0 +1,106 @@
+<form class="add_task_section" onload="openTaskDialogFor('toDoTask')">
+  <h1>Add Task</h1>
+  <div class="add_task_div">
+    <div class="add_task_half">
+      <label class="add_task_after_required" for="add_task_title">Title</label>
+      <input oninput="enableCreateTaskButton()" onfocusout="checkRequiredTitel()" id="add_task_title" class="add_task_input" type="text"
+        placeholder="Enter a title" required />
+      <p id="add_task_required_title" class="add_task_required"></p>
+
+      <label for="add_task_description">Description</label>
+      <textarea name="" id="add_task_description" class="add_task_input" placeholder="Enter a Description"></textarea>
+      <p class="add_task_required"></p>
+
+      <label class="add_task_after_required" for="add_task_date">Due date</label>
+      <input id="add_task_date" class="add_task_input" type="date" 
+        oninput="enableCreateTaskButton(), checkRequiredDate()" onfocusout="checkRequiredDate()" required />
+      <p id="add_task_required_date" class="add_task_required"></p>
+    </div>
+
+    <div class="seperator"></div>
+
+    <div class="add_task_half">
+      <p class="task-label">Priority</p>
+      <section id="add_task_priority_section" class="add_task_priority_section">
+        <button type="button" onclick="setBtnPriority('urgent')" id="add_task_btn_priority_urgent"
+          class="add_task_btn_priorities">
+          <p>Urgent</p>
+          <img class="priority_icons" src="../assets/img/icons/priority_urgent_red.svg" alt="priority urgent">
+        </button>
+        <button type="button" onclick="setBtnPriority('medium')" 
+          id="add_task_btn_priority_medium"
+          class="add_task_btn_priorities priority_color_medium">
+          <p>Medium</p>
+          <img class="priority_icons" src="../assets/img/icons/priority_medium_orange.svg" alt="priority medium" />
+        </button>
+        <button type="button" onclick="setBtnPriority('low')" id="add_task_btn_priority_low"
+          class="add_task_btn_priorities">
+          <p>Low</p>
+          <img class="priority_icons" src="../assets/img/icons/priority_low_green.svg" alt="priority low" />
+        </button>
+      </section>
+      <p class="add_task_required"></p>
+
+
+      <div class="editDialogBoardAssignedTo">
+        <p>Assigned to</p>
+        <div class="editDialogBoardAssignedToInputDiv">
+            <input type="text" placeholder="Select contacts to assign"
+                id="addTaskAssignedToInput" class="assignedToInput arrowDropDown"
+                onclick="handleAssignedToMenu()"
+                onkeyup="searchContactAssignedTo()">
+            <div id="editDialogBoardAssignedToDropDown" class="d_none"></div>
+        </div>
+        <div id="addTask_assignedToIcons" class="editDialogBoardAssignedToIcons"></div>
+        <p class="add_task_required"></p>
+    </div>
+
+      <label class="add_task_after_required" for="addTaskCategoryInput">Category</label>
+      <section class="editDialogBoardAssignedToInputDiv">
+        <input type="text" placeholder="Select task category" 
+          id="addTaskCategoryInput" class="arrowDropDown assignedToInput add_task_input" 
+          onclick="arrowDropDownSelection('addTaskCategory')" 
+          onfocusout="checkRequiredCategory()"
+          readonly="true" required>
+        <div id="addTaskCategoryDropDown" class="arrowDropDownInputs d_none">
+          <div onclick="addTaskselectCategory('Technical Task'), enableCreateTaskButton()" class="arrowDropDownInput">
+            <p>Technical Task</p>
+          </div>
+          <div onclick="addTaskselectCategory('User Story'), enableCreateTaskButton()" class="arrowDropDownInput">
+            <p>User Story</p>
+          </div>
+        </div>
+      </section>
+      <p id="add_task_required_category" class="add_task_required"></p>
+
+      <label for="add_task_subtask">Subtask</label>
+      <section class="editDialogBoardSubtasks">
+        <div class="addTaskSubtasksInput">
+          <input id="add_task_subtask" type="text" placeholder="Add new subtask">
+          <div onclick="clearSubtaskInput()" class="xIcon"></div>
+          <div class="vectorAddSubtask"></div>
+          <div onclick="addSubtask()" class="addIcon"></div>
+        </div>
+        <div id="addTask_subtask_content" class="collumn">
+        </div>
+        
+      </section>
+      <p class="add_task_required"></p>
+    </div>
+  </div>
+</form>
+<section class="add_task_btn_section">
+  <p class="add_task_hint_required">This field is required</p>
+  <div class="add_task_btns">
+    <input onclick="clearAddTaskForm()" class="btn_add_task btn_clear" type="reset" value="Clear X">
+    <button onclick="checkRequiredBtnAddTask(), addTask(this.dataset.columnId)" type="submit" id="btn_add_task_create_task" data-column-id="toDoTask"
+      class="btn_add_task btn_create" disabled>
+      Create Task
+      <img src="../assets/img/icons/add_task_btn_check.svg" alt="check">
+    </button>
+  </div>
+</section>
+<div class="taskAdded d_none" id="taskAdded">
+  <p>Task added to board</p>
+  <img src="../assets/img/icons/nav_board_icon_white.svg" alt="">
+</div>

@@ -1,0 +1,237 @@
+@media (max-width:1248px) {
+    .main_contacts {
+        padding-left: 32px;
+        padding-right: 8px;
+        padding-top: 70px;
+    }
+
+    #contactDetails {
+        padding-left: 32px;
+        padding-right: 8px;
+    }
+
+    @keyframes slightDetailsFromRightToCenter {
+        from {left: 2500px;}
+        to {left: 572px;}
+    }
+
+    .contactDetailsTop {
+        gap: 32px;
+    }
+
+    .contacts {
+        min-width: 340px;
+    }
+
+    .contactsList {
+        padding-left: 0;
+    }
+
+    .addNewContactButton {
+        width: 300px;
+    }
+
+    .alphabetInContactList {
+        width: 300px;
+    }
+
+    .seperatorContactList {
+        width: 300px;
+    }
+
+    .contactInList {
+        width: 300px;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+}
+
+@media (max-width:1024px) {
+    .main_content_contacts {
+        margin: 80px 0;
+        height: calc(100vh - 160px);
+        width: unset;
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+
+    .contacts {
+        height: calc(100vh - 160px);
+        left: 0;
+        width: 100vw;
+    }
+
+    #contactList> :first-child {
+        display: none;
+    }
+
+    .contactsList {
+        height: calc(100vh - 160px);
+    }
+
+    #contactDetails {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 32px;
+        gap: 21px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main_contacts, #contactDetails, #addContactSuccess, #editContactSuccess, #deleteContactSuccess {
+        display: none;
+    }
+
+    #addContactSuccess, #editContactSuccess, #deleteContactSuccess {
+        display: flex;
+        margin: 0px;
+        z-index: 10;
+        position: absolute;
+        top: 2500px;
+        left: calc((100vw - 300px)/2);
+        animation: slightFromDowntToCenter 1000ms forwards, pause 3000ms 1000ms forwards; ;
+        translate: -300% 0;
+    }
+
+    @keyframes slightFromDowntToCenter {
+        from {top: 2500px;}
+        to {top: 100px;}
+    }
+
+    @keyframes pause {
+        from {top: 100px;}
+        to {top: 2500px;}
+    }
+
+    .contactsListTop {
+        height: unset;
+        top: unset;
+        bottom: 96px;
+        right: calc((100vw / 2) - 199px);
+    }
+
+    .addNewContactButton {
+        width: 56px;
+        border-radius: 50%;
+        box-shadow: 2px 0px 6px 0px rgb(0, 0, 0, 0.2);
+    }
+
+    .addNewContactButtonText {
+        display: none;
+    }
+
+    .contactClick {
+        background: none;
+        color: black;
+    }
+
+    .main_contacts {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .seperator {
+        height: 1px;
+        width: 90px;
+        order: 3;
+    }
+
+    .contactName {
+        padding: 0;
+    }
+
+    .contactDetailsButtons{
+        position: fixed;
+        right: 8px;
+        bottom: 96px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px 20px 0 20px;
+        box-shadow: 2px 0px 6px 0px rgb(0, 0, 0, 0.2);
+        padding: 10px;
+        gap: 0;
+        z-index: 1;
+        transform: translateX(0); 
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .contactButton {
+        height: 40px;
+        min-width: 96px;
+        padding: 8px;
+    }
+
+    .arrowLeftContact {
+        display: flex;
+        position: absolute;
+        top: 180px;
+        right: 20px;
+        background-color: transparent;
+    }
+
+    .arrowLeftContact:hover {
+        background: #EEEEEE;
+        border-radius: 42px;
+        transform: scale(1.20);
+    }
+
+    .respContactEditMenuClosed {
+        transform: translateX(120%);
+    }
+}
+
+@media (max-width:440px) {
+    .contacts {
+        min-width: 320px;
+    }
+
+    .contactsListTop {
+        right: 16px;
+    }
+
+    .alphabetInContactList {
+        width: 280px;
+    }
+
+    .seperatorContactList {
+        width: 280px;
+    }
+
+    .contactInList {
+        width: 280px;
+        padding: 8px 16px;
+        gap: 16px;
+    }
+
+    .main_contacts {
+        padding-left: 12px;
+        padding-top: 32px;
+    }
+
+    #contactDetails {
+        padding-left: 12px;
+    }
+
+    .arrowLeftContact {
+        top: 112px;
+        right: 8px;
+    }
+
+    .contactDetailsTop {
+        height: 80px;
+        gap: 16px;
+    }
+
+    .contactCircleBig {
+        width: 80px;
+        height: 80px;
+    }
+
+    .contactName {
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,39 @@
+<div class="add_contact_background" id="add_contact_background" onclick="closeContactDialog(event)">
+  <div class="add_contact_container" id="add_contact_container">
+    <div class="add_contact_left gap_12">
+      <img src="../assets/img/join_logo.svg" alt="join logo" class="add_contact_logo">
+      <h1 class="add_contact_title">Add Contact</h1>
+      <h2 class="add_contact_subtitle">Tasks are better with a team!</h2>
+      <div class="blue_line_90x3"></div>
+    </div>
+    <div class="add_contact_middle">
+      <img src="../assets/img/icons/add_contact_icon.svg" alt="addContact" class="add_contact_img">
+    </div>
+    <div class="add_contact_right">
+      <div class="close_overlay">
+        <button onclick="closeContactDialog(event); return false;" id="closeOverlayButton" class="close_overlay_button"><img src="../assets/img/icons/X.svg" alt="Close"></button>
+      </div>
+      <form onsubmit="addContact(event); return false" onload="disableCreateContactButton()" onkeyup="enableCreateContactButton()" class="add_contact_form">
+        <div class="gap_32 center">
+            <div class="password_container">
+                <input type="text" placeholder="Name" class="input_contact" id="addContactName" name="Name" required>
+                <img src="../assets/img/icons/person.svg" alt="name" class="input_contact_img">
+            </div>
+            <div class="password_container">
+                <input type="email" pattern="^\w+@\w+\.[a-zA-Z]{2,}$" placeholder="Email" class="input_contact" id="addContactEmail" name="Email" required>
+                <img src="../assets/img/icons/mail.svg" alt="Email" class="input_contact_img">
+            </div>
+            <div class="password_container">
+                <input type="tel" pattern="^(0|\+49)[\d\s\-]{7,20}$" placeholder="Phone" class="input_contact" id="addContactPhone" name="Phone" required>
+                <img  src="../assets/img/icons/call.svg" alt="Phone" class="input_contact_img">
+            </div>
+        </div>
+        <div class="add_contact_btns">
+          <button onclick="closeContactDialog(event)" class="cancel_contact_btn">Cancel</button>
+          <button type="submit" disabled class="add_contact_btn" id="addContactBtn">Create Contact</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  

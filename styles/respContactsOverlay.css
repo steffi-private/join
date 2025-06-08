@@ -1,0 +1,228 @@
+@media (min-width: 1025px) and (max-width: 1439px) {
+    .add_contact_container{
+        width: unset;
+        left: calc(50vw - 450px);
+    }
+    .add_contact_left{
+    padding: 66px 24px 132px 24px;
+    width: 300px;
+    }
+
+    .add_contact_middle{
+        flex: unset;
+        padding: 100px 16px 100px 16px;
+    }
+
+    .add_contact_right{
+        padding: 66px 24px 66px 0px;
+    }
+}
+
+@media (max-width:1024px) {
+    #closeOverlayButton:hover {
+        background-color: rgba(41, 171, 226, 1);
+    }
+
+    .close_overlay{
+        right: calc(50% - 198px);
+        top: 32px;
+        background-color: #2A3647;
+    }
+
+    #closeOverlayButton{
+        background-color: #2A3647;
+    }
+
+    #closeOverlayButton img{
+        filter: brightness(0) invert(1);
+    }
+
+    .add_contact_container {
+        flex-direction: column;
+        top: unset;
+        left: unset;
+        height: calc(100vh - 160px);
+        width: 396px !important;
+        animation: slightFromDowntToUp 800ms;
+    }
+
+    .add_contact_container.slide-out {
+        animation: slideOutToBottom 800ms forwards;
+    }
+
+    .add_contact_left {
+        border-radius: 30px 30px 0 0;
+        height: 40vh;
+        width: 454px;
+    }
+
+    .add_contact_logo{
+        display: none;
+    }
+
+    .add_contact_right{
+        border-radius: 0 0 30px 30px;
+        height: 60vh;
+    }
+
+    .add_contact_middle {
+        height: auto;
+        background-color: unset;
+        flex: unset;
+        padding: 0;
+        position: absolute;
+        top: calc(40% - 45px);
+        left: calc(50% - 60px);
+        z-index: 4;
+    }
+
+    .contactIcon{
+        margin-bottom: 0 !important;
+    }
+
+    .add_contact_img{
+        margin-bottom: 0;
+    }
+
+    .add_contact_right{
+        padding: 66px 16px 66px 16px;
+    }
+
+    .add_contact_btns{
+        justify-content: center;
+        margin-top: 48px;
+    }
+
+    .add_contact_btn {
+        font-size: 21px;
+        padding: 18px 34px 18px 10px;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+    }
+
+    .delete_contact_btn {
+        font-size: 20px;
+        font-weight: 400;
+        padding: 18px 10px;
+        gap: 10px;
+    }
+
+    .cancel_contact_btn{
+        display: none;
+    }
+
+    .gap_32 {
+        gap: 16px;
+    }
+
+    .add_contact_title {
+        font-size: 47px;
+    }
+
+    .add_contact_subtitle {
+        font-size: 20px;
+    }
+
+    @media (min-height: 950px) { 
+        .add_contact_container {
+            height: 790px !important;
+        }
+
+        .add_contact_middle {
+            top: calc(40% - 45px);
+            left: calc(50% - 60px);
+        }
+    }
+    
+    @media (min-height: 1020px) { 
+        .add_contact_middle {
+            top: calc(40% - 41px);
+            left: calc(50% - 60px);
+        }
+    }
+
+    @media (min-height: 1120px) { 
+        .add_contact_middle {
+            top: calc(40% - 29px);
+            left: calc(50% - 60px);
+        }
+    }
+
+    @media (max-height: 920px) { 
+        .add_contact_btns {
+            margin-top: 36px;
+        }
+
+        .add_contact_middle {
+            top: calc(40% - 55px);
+            left: calc(50% - 60px);
+        }
+    }
+     
+    @media (max-height: 825px) {  
+        .close_overlay {
+            top: calc(0px - 5%);
+        }
+
+        .add_contact_btns {
+            margin-top: 24px;
+        }        
+    }
+}
+
+@media (max-width:500px) {
+    .add_contact_left{
+        width: 320px !important;
+        padding: 36px 24px 76px 24px;
+    }
+
+    .add_contact_right{
+        width: 320px;
+        padding: 36px 24px 76px 24px;
+    }
+
+    .add_contact_form{
+        width: 320px !important;
+    }
+
+    .input_contact, .password_container{
+        width: 300px !important;
+    }
+
+    .close_overlay{
+        top: 16px;
+        right: calc(50% - 140px);
+    }
+
+     @media (max-height: 815px) {  
+        .close_overlay {
+            top: calc(0px - 5%);
+            right: calc(50% - 140px);
+        }
+
+        .add_contact_btns {
+            margin-top: 24px;
+        }        
+    }
+
+    @media (max-height: 670px) {  
+        .close_overlay {
+            top: calc(0px - 10%);
+            right: calc(50% - 140px);
+        }
+    } 
+}
+
+@media (max-width:420px) {
+    #edit_contact_img{
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    @media (max-height: 670px) {  
+        .add_contact_middle {
+            top: calc(40% - 68px);
+            left: calc(50% - 60px);
+        }
+    }
+}

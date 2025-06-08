@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Join/Log in</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/join_logo_dark.svg"/>
+
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/respIndex.css" />
+
+    <script src="./scripts/logIn.js"></script>
+    <script src="./script.js"></script>
+    <script src="./scripts/remoteStorage.js"></script>
+    
+</head>
+<body class="body_logIn">
+    <div class="mobileStartScreen">
+        <img src="./assets/img/join_logo.svg" alt="" class="mobileStartScreenIcon">
+    </div>
+    <header class="header_logIn">
+        <img src="./assets/img/joinLogoBig.svg" alt="" class="mobileHeaderIcon">
+        <div class="header_LogIn_right">
+            <div>Not a Join user?</div>
+            <button class="header_LogIn_right_btn"><a href="./html/signUp.html">Sign up</a></button>
+        </div>
+    </header>
+    <main class="main_logIn">
+            <div class="logIn_content bShadow_blur14_opacity04">
+            <h1>Log in</h1>
+            <div class="blue_line_150x3"></div>
+            <form class="logIn_form">
+                <div class="gap_32 center">
+                    <div class="password_container">
+                        <input type="email" placeholder="Email" class="input_logIn" id="logInEmail" onblur="logInEmailError()" required>
+                        <div class="toggle_password">
+                            <img src="./assets/img/icons/mail.svg" alt="Password" class="input_logIn_img">
+                        </div>
+                        <div class="logIn_error d_none" id="logInEmail_error">The email address entered is not valid. Please try again.</div>
+                    </div>
+                    <div class="password_container">
+                        <input onfocus="onFocus('logInPassword')" onblur="onBlur('logInPassword')" type="password" placeholder="Password" class="input_logIn" id="logInPassword" required>
+                        <div class="toggle_password" onclick="handleImageClick('logInPassword')">
+                            <img src="./assets/img/icons/lock.svg" alt="Password" class="input_logIn_img" id="logInPasswordImg">
+                        </div>
+                        <div class="logIn_error d_none" id="logIn_error">Check your email and password. Please try again.</div>
+                    </div>
+
+                </div>
+                <div class="logIn_btns">
+                    <button onclick="logIn(); return false;" class="logIn_btn" id="logInBtn">Log in</button>
+                    <button onclick="logInGuest(); return false;" class="logIn_btn" id="guestLogInBtn">Guest Log in</button>
+                </div>
+            </form>
+        </div>
+        <div class="header_LogIn_resp">
+            <div>Not a Join user?</div>
+            <button class="header_LogIn_right_btn"><a href="./html/signUp.html">Sign up</a></button>
+        </div>  
+        <div id="orientationMessage" class="orientation-overlay d_none">
+            <p>Please rotate your device to portrait mode.</p>
+        </div>
+    </main>
+    <footer class="footer_logIn">
+        <a href="./html/privacyPolice.html">Privacy Policy</a>
+        <a href="./html/legalNotice.html">Legal notice</a>
+    </footer>
+</body>
+
+</html>
